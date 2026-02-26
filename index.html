@@ -1,235 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abhishek Vishwakarma - Resume</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abhishek Vishwakarma – Associate Software Engineer</title>
 
-  <style>
-    body {
-      font-family: "Segoe UI", Calibri, Arial, sans-serif;
-      background: #ffffff;
-      color: #000;
-      line-height: 1.35;
-      margin: 0;
-      padding: 24px;
-    }
-
-    .resume {
-      max-width: 800px;
-      margin: auto;
-    }
-
-    h1 {
-      font-size: 26px;
-      text-align: center;
-      margin-bottom: 8px;
-    }
-
-    .contact {
-      font-size: 14px;
-      margin-bottom: 16px;
-    }
-
-    a {
-      color: #0645ad;
-      text-decoration: underline;
-      font-weight: 500;
-      word-break: break-all;
-    }
-
-    .section {
-      margin-bottom: 16px;
-    }
-
-    .section-title {
-      font-size: 15px;
-      font-weight: 700;
-      border-bottom: 1px solid #000;
-      padding-bottom: 3px;
-      margin-bottom: 6px;
-      text-transform: uppercase;
-    }
-
-    p {
-      margin: 4px 0;
-      font-size: 14px;
-    }
-
-    ul {
-      margin: 4px 0 0 16px;
-      padding: 0;
-    }
-
-    ul li {
-      margin-bottom: 4px;
-      font-size: 14px;
-    }
-
-    .project-title {
-      font-weight: 600;
-    }
-
-    /* DOWNLOAD BUTTON */
-    .download-wrapper {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      z-index: 999;
-    }
-
-    .download-label {
-      background: #ffffff;
-      color: #C62828;
-      padding: 6px 12px;
-      font-size: 13px;
-      font-weight: 600;
-      border-radius: 20px;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-      white-space: nowrap;
-    }
-
-    .download-circle {
-      width: 56px;
-      height: 56px;
-      background: #C62828;
-      color: #fff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 26px;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    }
-
-    .download-circle:hover {
-      background: #A61B1B;
-    }
-
-    /* PRINT SETTINGS */
-    @page {
-      size: A4;
-      margin: 0;
-    }
-
-    @media print {
+    <style>
       body {
+        font-family: "Segoe UI", Calibri, Arial, sans-serif;
+        background: #ffffff;
+        color: #000;
+        line-height: 1.35;
+        margin: 0;
+        padding: 24px;
+      }
+
+      .resume {
+        max-width: 800px;
+        margin: auto;
+      }
+
+      h1 {
+        font-size: 26px;
+        text-align: center;
+        margin-bottom: 8px;
+      }
+
+      .contact {
+        font-size: 14px;
+        margin-bottom: 16px;
+      }
+
+      a {
+        color: #0645ad;
+        text-decoration: underline;
+        font-weight: 500;
+        word-break: break-all;
+      }
+
+      .section {
+        margin-bottom: 16px;
+      }
+
+      .section-title {
+        font-size: 15px;
+        font-weight: 700;
+        border-bottom: 1px solid #000;
+        padding-bottom: 3px;
+        margin-bottom: 6px;
+        text-transform: uppercase;
+      }
+
+      p {
+        margin: 4px 0;
+        font-size: 14px;
+      }
+
+      ul {
+        margin: 4px 0 0 16px;
         padding: 0;
       }
-      .download-wrapper {
-        display: none;
+
+      ul li {
+        margin-bottom: 4px;
+        font-size: 14px;
       }
-    }
-  </style>
-</head>
 
-<body>
-  <div class="resume">
-    <h1>ABHISHEK VISHWAKARMA</h1>
+      .project-title {
+        font-weight: 600;
+      }
 
-    <div class="contact">
-      📍 Mumbai, India | 📞 +91 8108643242 | ✉️ abhishekvishwakarma1149@gmail.com<br />
-      🔗 GitHub:
-      <a href="https://github.com/codewithabhi2003" target="_blank">
-        https://github.com/codewithabhi2003
-      </a><br />
-      🔗 LinkedIn:
-      <a href="https://www.linkedin.com/in/abhishek-vishwakarma-47a43828b" target="_blank">
-        https://www.linkedin.com/in/abhishek-vishwakarma-47a43828b
-      </a>
-    </div>
+      .download-wrapper {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        z-index: 999;
+      }
 
-    <!-- CAREER OBJECTIVE -->
-    <div class="section">
-      <div class="section-title">Career Objective</div>
-      <ul>
-        <li>Entry-level Full-Stack Developer experienced in building scalable web applications using JavaScript, React.js, and Node.js.</li>
-        <li>Strong foundation in MERN stack with hands-on experience in authentication, RESTful APIs, and frontend–backend integration.</li>
-        <li>Seeking a full-time software development role to contribute to real-world solutions and grow within a collaborative environment.</li>
-      </ul>
-    </div>
+      .download-label {
+        background: #ffffff;
+        color: #0a4c8b;
+        padding: 6px 12px;
+        font-size: 13px;
+        font-weight: 600;
+        border-radius: 20px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        white-space: nowrap;
+      }
 
-    <!-- PROJECTS -->
-    <div class="section">
-      <div class="section-title">Projects</div>
-      <p class="project-title">Job Portal – Full-Stack MERN Application</p>
-      <ul>
-        <li>Developed a full-stack MERN job portal with complete frontend–backend integration.</li>
-        <li>Implemented secure JWT-based authentication and authorization workflows.</li>
-        <li>Designed and integrated RESTful APIs to manage job postings, applications, and user workflows.</li>
-        <li>Built protected routes and enforced role-based access control across the application.</li>
-        <li>Handled resume uploads and storage using Cloudinary with validation and error handling.</li>
-        <li>Delivered a responsive, performance-optimized UI across desktop and mobile devices.</li>
-      </ul>
-      <p>
-        🔗 Live Demo:
-        <a href="https://jobportal-frontend-ten.vercel.app/" target="_blank">
-          https://jobportal-frontend-ten.vercel.app/
+      .download-circle {
+        width: 56px;
+        height: 56px;
+        background: #0a4c8b;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 26px;
+        text-decoration: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        border: none;
+      }
+
+      .download-circle:hover {
+        background: #083b6d;
+      }
+
+      @media print {
+        .download-wrapper {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="resume">
+      <h1>ABHISHEK VISHWAKARMA</h1>
+
+      <div class="contact">
+        📍 Mumbai, India &nbsp;|&nbsp; 📞 +91 8108643242 &nbsp;|&nbsp; ✉️
+        abhishekvishwakarma1149@gmail.com <br />
+        🔗 GitHub:
+        <a href="https://github.com/codewithabhi2003" target="_blank">
+          https://github.com/codewithabhi2003
         </a>
-      </p>
-    </div>
-
-    <!-- CERTIFICATIONS -->
-    <div class="section">
-      <div class="section-title">Certifications</div>
-      <ul>
-        <li>J.P. Morgan – Software Engineering Job Simulation</li>
-        <li>AWS – Solutions Architecture Job Simulation</li>
-        <li>Deloitte Australia – Data Analytics Job Simulation</li>
-        <li>Walmart USA – Advanced Software Engineering Job Simulation</li>
-        <li>DataCom – Cybersecurity Fundamentals</li>
-        <li>Docker – Containerization & Deployment</li>
-      </ul>
-      <p>
-        🔗 Certificates:
-        <a href="https://drive.google.com/file/d/1FH-uXXmyMsILWGyvCgmUwxa9H5lkJSTr/view" target="_blank">
-          https://drive.google.com/file/d/1FH-uXXmyMsILWGyvCgmUwxa9H5lkJSTr/view
+        <br />
+        🔗 LinkedIn:
+        <a
+          href="https://www.linkedin.com/in/abhishek-vishwakarma-47a43828b"
+          target="_blank"
+        >
+          https://www.linkedin.com/in/abhishek-vishwakarma-47a43828b
         </a>
-      </p>
+      </div>
+
+      <!-- CAREER OBJECTIVE -->
+      <div class="section">
+        <div class="section-title">Career Objective</div>
+        <ul>
+          <li>
+            Motivated Full-Stack Developer with hands-on experience building
+            scalable web applications using JavaScript, React.js, Node.js, and
+            the MERN stack.
+          </li>
+          <li>
+            Proficient in designing and integrating RESTful APIs, implementing
+            secure JWT-based authentication workflows, and delivering seamless
+            frontend–backend integration.
+          </li>
+          <li>
+            Seeking a Software Engineer role to apply full-stack development
+            expertise, contribute to scalable web and application solutions, and
+            grow within a collaborative, innovation-driven engineering team.
+          </li>
+        </ul>
+      </div>
+
+      <!-- PROJECTS -->
+      <div class="section">
+        <div class="section-title">Projects</div>
+        <p class="project-title">Job Portal – Full-Stack MERN Application</p>
+        <ul>
+          <li>
+            Architected and developed a scalable full-stack Job Portal using the
+            MERN stack, enabling employers to post listings and candidates to
+            apply through a fully integrated, responsive interface.
+          </li>
+          <li>
+            Engineered secure RESTful APIs with JWT-based authentication and
+            Role-Based Access Control (RBAC), enforcing protected routes across
+            Admin, Employer, and Candidate roles.
+          </li>
+          <li>
+            Designed job posting, application management, and user workflow APIs
+            following clean MVC architecture for scalability and maintainability.
+          </li>
+          <li>
+            Integrated Cloudinary for cloud-based resume uploads with file
+            validation and error handling, ensuring reliable persistent storage
+            and retrieval.
+          </li>
+          <li>
+            Deployed the application on Vercel with environment-based
+            configuration, achieving high availability and continuous delivery.
+          </li>
+          <li>
+            Delivered a performance-optimized, cross-device responsive UI in
+            React.js with dynamic routing and component-driven state management.
+          </li>
+        </ul>
+        <p>
+          🔗 Live Demo:
+          <a href="https://jobportal-frontend-ten.vercel.app/" target="_blank">
+            https://jobportal-frontend-ten.vercel.app/
+          </a>
+        </p>
+        <p>
+          🔗 GitHub Repository:
+          <a href="https://github.com/codewithabhi2003/JOB-PORTAL" target="_blank">
+            https://github.com/codewithabhi2003/JOB-PORTAL
+          </a>
+        </p>
+      </div>
+
+      <!-- CERTIFICATIONS -->
+      <div class="section">
+        <div class="section-title">Certifications</div>
+        <ul>
+          <li>J.P. Morgan – Software Engineering Job Simulation</li>
+          <li>AWS – Solutions Architecture Job Simulation</li>
+          <li>Deloitte Australia – Data Analytics Job Simulation</li>
+          <li>Walmart USA – Advanced Software Engineering Job Simulation</li>
+          <li>DataCom – Cybersecurity Fundamentals</li>
+          <li>Docker – Containerization &amp; Deployment</li>
+        </ul>
+        <p>
+          🔗 Certificates:
+          <a
+            href="https://drive.google.com/file/d/1FH-uXXmyMsILWGyvCgmUwxa9H5lkJSTr/view"
+            target="_blank"
+          >
+            https://drive.google.com/file/d/1FH-uXXmyMsILWGyvCgmUwxa9H5lkJSTr/view
+          </a>
+        </p>
+      </div>
+
+      <!-- TECHNICAL SKILLS -->
+      <div class="section">
+        <div class="section-title">Technical Skills</div>
+        <p>
+          <strong>Languages:</strong> JavaScript, Python, HTML, CSS, Java
+          (Basics)
+        </p>
+        <p>
+          <strong>Frameworks &amp; Libraries:</strong> React.js, Node.js,
+          Express.js
+        </p>
+        <p><strong>Databases:</strong> MongoDB, SQL (Basics)</p>
+        <p>
+          <strong>Cloud &amp; DevOps:</strong> AWS (Solutions Architecture
+          Fundamentals), Docker, Vercel, Netlify, Render
+        </p>
+        <p>
+          <strong>Cybersecurity:</strong> Network Security &amp; Cybersecurity
+          Fundamentals (DataCom)
+        </p>
+        <p>
+          <strong>Tools:</strong> Git, GitHub, Postman, VS Code, Trello
+        </p>
+        <p>
+          <strong>Key Concepts:</strong> REST APIs, JWT Authentication, RBAC,
+          Data Structures, MVC Architecture, Problem Solving, Scalable
+          Application Design
+        </p>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="section">
+        <div class="section-title">Education</div>
+        <p>
+          <strong>Bachelor of Science in Information Technology (BSc IT)</strong><br />
+          L.S. Raheja College, University of Mumbai &nbsp;|&nbsp; 2023 – 2026
+          (Pursuing)
+        </p>
+        <p style="margin-top: 6px;">
+          <strong>Higher Secondary Certificate (HSC)</strong><br />
+          Durga Devi Saraf Junior College &nbsp;|&nbsp; Completed in 2020
+        </p>
+      </div>
+
+      <!-- SOFT SKILLS -->
+      <div class="section">
+        <div class="section-title">Soft Skills</div>
+        <p>
+          Problem Solving &nbsp;|&nbsp; Team Collaboration &nbsp;|&nbsp;
+          Adaptability &nbsp;|&nbsp; Quick Learning &nbsp;|&nbsp; Communication
+        </p>
+      </div>
     </div>
 
-    <!-- TECHNICAL SKILLS -->
-    <div class="section">
-      <div class="section-title">Technical Skills</div>
-      <p><strong>Languages:</strong> JavaScript, Python, HTML, CSS, Java (Basics)</p>
-      <p><strong>Frameworks & Libraries:</strong> React.js, Node.js, Express.js</p>
-      <p><strong>Databases:</strong> MongoDB, SQL (Basics)</p>
-      <p><strong>Cloud & DevOps:</strong> AWS (Solutions Architecture Fundamentals), Docker</p>
-      <p><strong>Cybersecurity:</strong> Network Security & Cybersecurity Fundamentals (DataCom)</p>
-      <p><strong>Tools:</strong> Git, GitHub, Postman, VS Code, Netlify, Render, Trello, Excel, Power BI</p>
-      <p><strong>Key Concepts:</strong> Data Structures, REST APIs, Authentication, MVC, Problem Solving</p>
-    </div>
-
-    <!-- EDUCATION -->
-    <div class="section">
-      <div class="section-title">Education</div>
-      <p>
-        <strong>Bachelor of Science in Information Technology (BSc IT)</strong><br />
-        L.S. Raheja College, University of Mumbai | 2023 – 2026
-      </p>
-      <p>
-        <strong>Higher Secondary Certificate (HSC)</strong><br />
-        Durga Devi Saraf Junior College | Completed in 2020
-      </p>
-    </div>
-
-    <!-- SOFT SKILLS -->
-    <div class="section">
-      <div class="section-title">Soft Skills</div>
-      <p>Problem-Solving | Team Collaboration | Adaptability | Quick Learning | Communication</p>
-    </div>
-  </div>
-
-  <!-- FLOATING DOWNLOAD BUTTON -->
-  <div class="download-wrapper">
-    <div class="download-label">Download Resume</div>
-    <a href="resume1.pdf" download class="download-circle" title="Download Resume">
-      ⬇
-    </a>
-  </div>
-</body>
+    <!-- DOWNLOAD BUTTON -->
+    <div class="download-wrapper">
+  <div class="download-label">Download Resume</div>
+  <a href="resum1.pdf" download class="download-circle" title="Download Resume">
+    ⬇
+  </a>
+</div>
+  </body>
 </html>
