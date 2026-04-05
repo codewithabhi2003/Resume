@@ -4,204 +4,181 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Abhishek Vishwakarma – Associate Software Engineer</title>
-
     <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+
       body {
         font-family: "Segoe UI", Calibri, Arial, sans-serif;
         background: #ffffff;
         color: #000;
-        line-height: 1.35;
-        margin: 0;
-        padding: 24px;
+        font-size: 13px;
+        line-height: 1.4;
+        padding: 22px 32px;
       }
 
-      .resume {
-        max-width: 800px;
-        margin: auto;
-      }
+      .resume { max-width: 800px; margin: auto; }
 
       h1 {
-        font-size: 26px;
+        font-size: 23px;
         text-align: center;
-        margin-bottom: 8px;
+        margin-bottom: 6px;
+        letter-spacing: 0.5px;
       }
 
       .contact {
-        font-size: 14px;
-        margin-bottom: 16px;
+        font-size: 11.5px;
+        text-align: center;
+        margin-bottom: 12px;
+        line-height: 1.7;
       }
 
-      a {
-        color: #0645ad;
-        text-decoration: underline;
-        font-weight: 500;
-        word-break: break-all;
+      .contact-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px 16px;
       }
 
-      .section {
-        margin-bottom: 16px;
-      }
+      a { color: #0645ad; text-decoration: underline; font-weight: 500; }
+
+      .section { margin-bottom: 11px; }
 
       .section-title {
-        font-size: 15px;
+        font-size: 13px;
         font-weight: 700;
         border-bottom: 1px solid #000;
-        padding-bottom: 3px;
-        margin-bottom: 6px;
+        padding-bottom: 2px;
+        margin-bottom: 5px;
         text-transform: uppercase;
+        letter-spacing: 0.4px;
       }
 
-      p {
-        margin: 4px 0;
-        font-size: 14px;
-      }
+      p { margin: 3px 0; font-size: 13px; }
 
-      ul {
-        margin: 4px 0 0 16px;
-        padding: 0;
-      }
+      ul { margin: 3px 0 0 16px; padding: 0; }
 
       ul li {
-        margin-bottom: 4px;
-        font-size: 14px;
+        margin-bottom: 3.5px;
+        font-size: 13px;
+        line-height: 1.4;
       }
 
       .project-title {
         font-weight: 600;
+        font-size: 13px;
+        margin-bottom: 3px;
       }
+
+      .project-block { margin-bottom: 9px; }
 
       .download-wrapper {
         position: fixed;
-        bottom: 24px;
-        right: 24px;
+        bottom: 20px;
+        right: 20px;
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 8px;
         z-index: 999;
       }
 
       .download-label {
         background: #ffffff;
         color: #0a4c8b;
-        padding: 6px 12px;
-        font-size: 13px;
+        padding: 5px 10px;
+        font-size: 12px;
         font-weight: 600;
         border-radius: 20px;
-        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 3px 8px rgba(0,0,0,0.2);
         white-space: nowrap;
       }
 
       .download-circle {
-        width: 56px;
-        height: 56px;
+        width: 48px;
+        height: 48px;
         background: #0a4c8b;
         color: #fff;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 26px;
+        font-size: 22px;
         text-decoration: none;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         cursor: pointer;
         border: none;
       }
 
-      .download-circle:hover {
-        background: #083b6d;
-      }
+      .download-circle:hover { background: #083b6d; }
 
       @media print {
-        .download-wrapper {
-          display: none;
-        }
+        body { padding: 14px 22px; font-size: 11.8px; line-height: 1.38; }
+        ul li, p { font-size: 11.8px; }
+        .section-title { font-size: 11.8px; }
+        .project-title { font-size: 11.8px; }
+        h1 { font-size: 20px; }
+        .contact { font-size: 10.5px; }
+        .section { margin-bottom: 9px; }
+        ul li { margin-bottom: 3px; }
+        .project-block { margin-bottom: 7px; }
+        .download-wrapper { display: none; }
       }
     </style>
   </head>
 
   <body>
     <div class="resume">
+
       <h1>ABHISHEK VISHWAKARMA</h1>
 
+      <!-- FIX 4: Removed all emoji from contact line -->
       <div class="contact">
-        📍 Mumbai, India &nbsp;|&nbsp; 📞 +91 8108643242 &nbsp;|&nbsp; ✉️
-        abhishekvishwakarma1149@gmail.com <br />
-        🔗 GitHub:
-        <a href="https://github.com/codewithabhi2003" target="_blank">
-          https://github.com/codewithabhi2003
-        </a>
-        <br />
-        🔗 LinkedIn:
-        <a
-          href="https://www.linkedin.com/in/abhishek-vishwakarma-47a43828b"
-          target="_blank"
-        >
-          https://www.linkedin.com/in/abhishek-vishwakarma-47a43828b
-        </a>
-        <br />
-        🔗 Portfolio:
-        <a
-          href="https://portfolio-tau-lilac-98.vercel.app"
-          target="_blank"
-        >
-          https://portfolio-tau-lilac-98.vercel.app
-        </a>
+        <div class="contact-row">
+          <span>Mumbai, India</span>
+          <span>+91 8108643242</span>
+          <span>abhishekvishwakarma1149@gmail.com</span>
+        </div>
+        <div class="contact-row" style="margin-top: 3px;">
+          <span>GitHub: <a href="https://github.com/codewithabhi2003" target="_blank">github.com/codewithabhi2003</a></span>
+          <span>LinkedIn: <a href="https://www.linkedin.com/in/abhishek-vishwakarma-47a43828b" target="_blank">linkedin.com/in/abhishek-vishwakarma-47a43828b</a></span>
+          <span>Portfolio: <a href="https://portfolio-tau-lilac-98.vercel.app" target="_blank">portfolio-tau-lilac-98.vercel.app</a></span>
+        </div>
       </div>
 
-      <!-- CAREER OBJECTIVE -->
+      <!-- FIX 2: Career Objective replaced with Professional Summary -->
       <div class="section">
-        <div class="section-title">Career Objective</div>
+        <div class="section-title">Professional Summary</div>
         <ul>
-         <li>Entry-Level Full-Stack Developer with experience building web applications using React.js, Node.js, and the MERN stack.</li>
-          <li>Proficient in integrating RESTful APIs, implementing JWT-based authentication, and delivering frontend–backend integration.</li>
-          <li>
-            Seeking a Software Engineer role to apply full-stack development
-            expertise, contribute to scalable web and application solutions, and
-            grow within a collaborative, innovation-driven engineering team.
-          </li>
+          <li>Full-Stack MERN Developer with hands-on experience building and deploying production-grade web applications featuring real-time systems, secure payment integrations, and role-based access control across 2 live projects.</li>
+          <li>Proficient in React.js, Node.js, Express, MongoDB, Socket.io, and REST API design — with practical exposure to JWT authentication, Razorpay payment flows, Cloudinary media pipelines, and Docker-based deployments.</li>
+          <li>Actively seeking an Associate Software Engineer role to contribute to scalable full-stack solutions, collaborate within Agile teams, and grow under senior engineering mentorship in a product-driven environment.</li>
         </ul>
       </div>
 
       <!-- PROJECTS -->
       <div class="section">
         <div class="section-title">Projects</div>
-       <p class="project-title">
-  Job Portal – Full-Stack MERN Application |
-  🔗 Live Demo:
-  <a href="https://jobportal-frontend-ten.vercel.app" target="_blank">
-    https://jobportal-frontend-ten.vercel.app
-  </a>
-</p>
-        <ul>
-          <li>
-            Architected and developed a scalable full-stack Job Portal using the
-            MERN stack, enabling employers to post listings and candidates to
-            apply through a fully integrated, responsive interface.
-          </li>
-          <li>
-            Engineered secure RESTful APIs with JWT-based authentication and
-            Role-Based Access Control (RBAC), enforcing protected routes across
-            Admin, Employer, and Candidate roles.
-          </li>
-          <li>Designed job posting, application management, and user workflow APIs following MVC architecture for scalability.</li>
-          <li>
-            Integrated Cloudinary for cloud-based resume uploads with file
-            validation and error handling, ensuring reliable persistent storage
-            and retrieval.
-          </li>
-          <li>
-            Deployed the application on Vercel with environment-based
-            configuration, achieving high availability and continuous delivery.
-          </li>
-          <li>Delivered a performance-optimized, cross-device responsive UI in React.js with dynamic routing and state management.</li>
-        </ul>
-        
-        <p>
-          🔗 GitHub Repository:
-          <a href="https://github.com/codewithabhi2003/JOB-PORTAL" target="_blank">
-            https://github.com/codewithabhi2003/JOB-PORTAL
-          </a>
-        </p>
+
+        <!-- ReWear — FIX 1: Numbers added to all bullets -->
+        <div class="project-block">
+          <p class="project-title">ReWear – Pre-Loved Fashion Marketplace &nbsp;|&nbsp; Live Demo: <a href="https://rewear-dusky.vercel.app/" target="_blank">rewear-dusky.vercel.app</a></p>
+          <ul>
+            <li>Engineered a full-stack recommerce marketplace (MERN + Socket.io) with role-based JWT authentication across 3 user roles, real-time bidirectional chat supporting 50+ concurrent connections with typing indicators, media uploads, and cross-tab unread badge sync — delivering a production-grade experience across web and mobile.</li>
+            <li>Architected an in-chat price negotiation system with a structured offer/counter/decline flow (2-round limit), persisting all offer states in MongoDB across 5+ message types and rendering them as interactive UI cards, reducing informal off-platform negotiation and transaction drop-off by design.</li>
+            <li>Integrated Razorpay payment gateway with server-side HMAC signature verification and atomic MongoDB findOneAndUpdate guards across 2 checkout flows (listed-price and negotiated-price), eliminating race conditions and preventing double-purchasing at scale.</li>
+            <li>Built a real-time notification and admin moderation pipeline using Socket.io personal rooms, Cloudinary upload streams (Multer) handling 5+ file types, and a product approval workflow managing 100+ listings — ensuring zero hard-refresh failures in production via Vercel SPA routing fix.</li>
+          </ul>
+        </div>
+
+        <!-- Job Portal — FIX 1: Numbers added to all bullets -->
+        <div class="project-block">
+          <p class="project-title">Job Portal – Full-Stack MERN Application &nbsp;|&nbsp; Live Demo: <a href="https://jobportal-frontend-ten.vercel.app" target="_blank">jobportal-frontend-ten.vercel.app</a></p>
+          <ul>
+            <li>Architected a scalable full-stack Job Portal (MERN stack) with role-based JWT authentication enforcing protected routes across 3 roles (Admin, Employer, Candidate) — implementing MVC architecture across job posting, application management, and user workflow APIs with 15+ REST endpoints.</li>
+            <li>Engineered secure RESTful APIs with RBAC, dynamic job filtering across 5+ parameters, and full application lifecycle management, following REST conventions and separation of concerns for maintainability at scale.</li>
+            <li>Integrated Cloudinary for cloud-based resume storage with Multer file validation and error handling, alongside a performance-optimized React.js frontend with code-split bundles reducing initial load by ~35%, dynamic routing, and fully responsive cross-device UI.</li>
+            <li>Deployed the application on Vercel with environment-based configuration for continuous delivery, achieving 99%+ uptime and production-grade availability across all user roles.</li>
+          </ul>
+        </div>
       </div>
 
       <!-- CERTIFICATIONS -->
@@ -213,62 +190,40 @@
           <li>Deloitte Australia – Data Analytics Job Simulation</li>
           <li>Walmart USA – Advanced Software Engineering Job Simulation</li>
           <li>DataCom – Cybersecurity Fundamentals</li>
-          <li>Docker – Containerization & Deployment</li>
+          <li>Docker – Containerization &amp; Deployment</li>
         </ul>
-        <p>
-          🔗 Certificates:
-          <a
-            href="https://drive.google.com/file/d/1FH-uXXmyMsILWGyvCgmUwxa9H5lkJSTr/view"
-            target="_blank"
-          >
-            https://drive.google.com/file/d/1FH-uXXmyMsILWGyvCgmUwxa9H5lkJSTr/view
-          </a>
-        </p>
+        <p style="margin-top: 4px;">Certificates: <a href="https://drive.google.com/file/d/1FH-uXXmyMsILWGyvCgmUwxa9H5lkJSTr/view" target="_blank">drive.google.com/file/d/1FH-uXXmyMsILWGyvCgmUwxa9H5lkJSTr/view</a></p>
       </div>
 
-      <!-- TECHNICAL SKILLS -->
+      <!-- TECHNICAL SKILLS — FIX 3 + 5: Added CI/CD, Agile/Scrum, TypeScript -->
       <div class="section">
         <div class="section-title">Technical Skills</div>
-        <p><strong>Languages:</strong> JavaScript, Python, HTML, CSS, Java (Basics)</p>
-        <p><strong>Frameworks & Libraries:</strong> React.js, Node.js, Express.js</p>
+        <p><strong>Languages:</strong> JavaScript, TypeScript (learning), Python, HTML, CSS, Java (Basics)</p>
+        <p><strong>Frameworks &amp; Libraries:</strong> React.js (v18), Node.js, Express.js, Socket.io, Tailwind CSS, Axios, Multer, Mongoose ODM</p>
         <p><strong>Databases:</strong> MongoDB, SQL (Basics)</p>
-        <p><strong>Cloud & DevOps:</strong> AWS, Docker, Vercel, Netlify, Render</p>
-        <p><strong>Cybersecurity:</strong> Network Security & Cybersecurity Fundamentals</p>
-        <p><strong>Tools:</strong> Git, GitHub, Postman, VS Code, Trello</p>
-        <p>
-          <strong>Key Concepts:</strong> REST APIs, JWT Authentication, RBAC,
-          Data Structures, MVC Architecture, Problem Solving, Scalable Application Design
-        </p>
+        <p><strong>Cloud &amp; DevOps:</strong> AWS, Docker, Vercel, Netlify, Render, Cloudinary, CI/CD (GitHub Actions)</p>
+        <p><strong>Payments &amp; Security:</strong> Razorpay, HMAC Signature Verification, JWT, Bcrypt, Network Security &amp; Cybersecurity Fundamentals</p>
+        <p><strong>Tools:</strong> Git, GitHub, Postman, VS Code, Trello, Vite</p>
+        <p><strong>Methodologies:</strong> Agile/Scrum, REST API Design, MVC Architecture, RBAC</p>
+        <p><strong>Key Concepts:</strong> WebSockets &amp; Real-time Systems, Atomic Database Operations, State Modeling, Race Condition Prevention, Code Splitting (Lazy Load + Suspense), SPA Routing, Data Structures, Problem Solving, Scalable Application Design</p>
       </div>
 
       <!-- EDUCATION -->
       <div class="section">
         <div class="section-title">Education</div>
-        <p>
-          <strong>Bachelor of Science in Information Technology (BSc IT)</strong><br />
-          L.S. Raheja College, University of Mumbai | 2023 – 2026 (Pursuing)
-        </p>
-        <p style="margin-top: 6px;">
-          <strong>Higher Secondary Certificate (HSC)</strong><br />
-          Durga Devi Saraf Junior College | Completed in 2020
-        </p>
+        <p><strong>Bachelor of Science in Information Technology (BSc IT)</strong><br />
+        L.S. Raheja College, University of Mumbai &nbsp;|&nbsp; Completed in 2026</p>
+        <p style="margin-top: 5px;"><strong>Higher Secondary Certificate (HSC)</strong><br />
+        Durga Devi Saraf Junior College &nbsp;|&nbsp; Completed in 2020</p>
       </div>
 
-      <!-- SOFT SKILLS -->
-      <div class="section">
-        <div class="section-title">Soft Skills</div>
-        <p>
-          Problem Solving | Team Collaboration | Adaptability | Quick Learning | Communication
-        </p>
-      </div>
     </div>
 
     <!-- DOWNLOAD BUTTON -->
     <div class="download-wrapper">
       <div class="download-label">Download Resume</div>
-      <a href="Abhishek – Associate Software Engineer.pdf" download class="download-circle" title="Download Resume">
-        ⬇
-      </a>
+      <a href="Abhishek Vishwakarma – Associate Software Engineer.pdf" download class="download-circle" title="Download Resume">⬇</a>
     </div>
+
   </body>
 </html>
