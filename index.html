@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Abhishek Vishwakarma – Associate Software Engineer</title>
+    <title>Abhishek Vishwakarma – Full Stack Developer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
       * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -156,9 +157,9 @@
       <div class="section">
         <div class="section-title">Professional Summary</div>
         <ul>
-          <li>Full-Stack MERN Developer with production experience building real-time applications featuring AI API integration, payment gateway integration, and RBAC — across 2 live, deployed projects.</li>
-          <li>Proficient in React.js, Node.js, Express, MongoDB, Socket.io, and REST API design — with hands-on exposure to JWT authentication, Razorpay, Cloudinary, Google Gemini AI, and CI/CD via GitHub Actions.</li>
-          <li>Actively seeking an Associate Software Engineer role to contribute scalable full-stack solutions, participate in agile development, engage in code reviews, and grow under senior engineering mentorship.</li>
+          <li>Full Stack Developer with hands-on production experience building and deploying end-to-end MERN applications — including real-time WebSocket systems, AI API integrations (Groq + Google Gemini), payment gateway flows, and role-based access control across 2 live projects.</li>
+          <li>Strong command of the full development lifecycle: REST API design and testing (Postman), secure backend architecture (JWT, HMAC, RBAC), responsive React frontends (code-splitting, dynamic routing), cloud media management (Cloudinary), and CI/CD pipelines using GitHub Actions with deployments on Vercel and Render.</li>
+          <li>Seeking a Full Stack Developer role to deliver scalable, production-ready features across both frontend and backend — contributing to system design discussions, participating in code reviews, and growing within a collaborative engineering team.</li>
         </ul>
       </div>
 
@@ -170,10 +171,10 @@
         <div class="project-block">
           <p class="project-title">ReWear – Pre-Loved Fashion Marketplace &nbsp;|&nbsp; Live: <a href="https://rewear-dusky.vercel.app/" target="_blank">rewear-dusky.vercel.app</a></p>
           <ul>
-           <li>Delivered end-to-end AI integration with a hybrid architecture — text messages routed to Groq (LLaMA 3.1) for 14,400 req/day free-tier capacity, image uploads routed to Google Gemini for vision-based resale price estimation with Cloudinary image input; engineered fault-tolerant 3-key rotation and 2-model fallback chain per provider for production-grade quota resilience across both APIs.</li>
+            <li>Delivered end-to-end AI integration with a hybrid architecture — text messages routed to Groq (LLaMA 3.1) for 14,400 req/day free-tier capacity, image uploads routed to Google Gemini for vision-based resale price estimation with Cloudinary image input; engineered fault-tolerant 3-key rotation and 2-model fallback chain per provider for production-grade quota resilience across both APIs.</li>
             <li>Built a production-grade real-time MERN + Socket.io application with role-based route protection across 2 roles (Admin, User) — single User account supporting both buying and selling — with bidirectional chat and Cloudinary media uploads via <code>upload_stream</code> pipeline.</li>
             <li>Architected an in-chat price negotiation engine with structured offer/counter-offer/decline flows (2-round limit) persisted across 5 message types using atomic MongoDB operations — eliminating inconsistent transaction states.</li>
-            <li>Integrated Razorpay with HMAC server-side signature verification guarding 2 checkout flows (standard + negotiated price) against race conditions; deployed on Vercel + Render with zero hard-refresh failures in production.</li>
+            <li>Integrated Razorpay with HMAC server-side signature verification guarding 2 checkout flows (standard + negotiated price) against race conditions; implemented CI pipelines using GitHub Actions and integrated platform-native CD via Vercel and Render — achieving zero hard-refresh failures in production.</li>
             <li>Implemented a 5-status listing lifecycle (pending → approved → rejected → sold → inactive) with admin moderation as a content trust layer; secured Socket.io connections via JWT handshake middleware — rejecting unauthenticated connections before room entry.</li>
           </ul>
         </div>
@@ -185,7 +186,7 @@
             <li>Architected a scalable Job Portal (MERN) with RBAC across 2 roles (Recruiter, Job Seeker) — 15+ RESTful APIs on MVC architecture covering job posting, applications, and user workflows with JWT-based authentication and protected routes.</li>
             <li>Built secure backend services with dynamic job filtering across multiple parameters and complete application lifecycle management, following REST principles and clean separation of concerns.</li>
             <li>Integrated Cloudinary for cloud-based resume storage with Multer validation and error handling; delivered a performance-optimized React frontend with code-splitting, dynamic routing, and a fully responsive UI.</li>
-            <li>Tested and validated 15+ APIs using Postman ensuring reliable request/response handling, authentication workflows, and robust error handling across both user roles; deployed on Vercel with environment-based configuration for continuous delivery.</li>
+            <li>Tested and validated 15+ APIs using Postman ensuring reliable request/response handling and robust error handling across both user roles; configured automated build validation and deployment workflows on Vercel ensuring production stability through environment-based configuration.</li>
           </ul>
         </div>
       </div>
@@ -195,7 +196,7 @@
         <div class="section-title">Technical Skills</div>
         <p><strong>Languages:</strong> JavaScript (ES6+), TypeScript (learning), Python, HTML5, CSS3, Java (Basics)</p>
         <p><strong>Frameworks &amp; Libraries:</strong> React.js (v18), Node.js, Express.js, Socket.io, Tailwind CSS, Axios, Multer, Mongoose ODM</p>
-        <p><strong>AI &amp; APIs:</strong> Google Gemini API, multi-turn conversational AI, REST API design, Postman (API testing &amp; documentation)</p>
+        <p><strong>AI &amp; APIs:</strong> Google Gemini API, Groq API (LLaMA 3.1), multi-turn conversational AI, REST API design, Postman (API testing &amp; documentation)</p>
         <p><strong>Databases:</strong> MongoDB (atomic operations, aggregation pipelines, indexing), SQL (Basics)</p>
         <p><strong>Cloud &amp; DevOps:</strong> AWS, Docker, Vercel, Render, Netlify, Cloudinary, CI/CD (GitHub Actions)</p>
         <p><strong>Payments &amp; Security:</strong> Razorpay, HMAC Signature Verification, JWT, Bcrypt, RBAC, Cybersecurity Fundamentals</p>
@@ -222,21 +223,8 @@
 
     <div class="download-wrapper">
       <div class="download-label">Download Resume</div>
-      <a href="#" onclick="downloadResume(); return false;" class="download-circle" title="Download Resume">⬇</a>
+      <a href="Abhishek Vishwakarma – Full Stack Developer.pdf" download="Abhishek Vishwakarma – Full Stack Developer.pdf" class="download-circle" title="Download Resume">⬇</a>
     </div>
-
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-      function downloadResume() {
-        const html = document.documentElement.outerHTML;
-        const blob = new Blob([html], { type: 'text/html' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'Abhishek_Vishwakarma_Resume.html';
-        a.click();
-        URL.revokeObjectURL(url);
-      }
-    </script>
 
   </body>
 </html>
