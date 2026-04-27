@@ -56,6 +56,14 @@
 
       p { margin: 2px 0; font-size: 13px; }
 
+      /* Summary paragraphs — NOT bullets */
+      .summary-para {
+        font-size: 13px;
+        line-height: 1.5;
+        margin-bottom: 5px;
+      }
+      .summary-para:last-child { margin-bottom: 0; }
+
       ul { margin: 2px 0 0 16px; padding: 0; }
 
       ul li {
@@ -70,14 +78,17 @@
         margin-bottom: 3px;
       }
 
+      .project-meta {
+        font-size: 11.5px;
+        color: #444;
+        margin-bottom: 4px;
+      }
+
       .project-block { margin-bottom: 9px; }
 
       .cert-line {
         font-size: 13px;
         margin-bottom: 2px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
       }
 
       .download-wrapper {
@@ -121,16 +132,16 @@
 
       @media print {
         body { padding: 14px 24px; font-size: 12px; line-height: 1.4; }
-        ul li, p, .cert-line { font-size: 12px; }
+        ul li, p, .cert-line, .summary-para { font-size: 12px; }
         .section-title { font-size: 12px; }
         .project-title { font-size: 12px; }
+        .project-meta { font-size: 10.5px; }
         h1 { font-size: 21px; }
         .contact { font-size: 10.5px; }
         .section { margin-bottom: 8px; }
         ul li { margin-bottom: 3px; }
         .project-block { margin-bottom: 7px; }
         .download-wrapper { display: none; }
-        .cert-line { white-space: normal; }
       }
     </style>
   </head>
@@ -144,7 +155,8 @@
         <div class="contact-row">
           <span>Mumbai, India</span>
           <span>+91 8108643242</span>
-          <span id="em"></span><script>document.getElementById("em").textContent="abhishekvishwakarma1149"+"@"+"gmail.com";</script>
+          <span id="em"></span>
+          <script>document.getElementById("em").textContent="abhishekvishwakarma1149"+"@"+"gmail.com";</script>
         </div>
         <div class="contact-row" style="margin-top: 3px;">
           <span>GitHub: <a href="https://github.com/codewithabhi2003" target="_blank">github.com/codewithabhi2003</a></span>
@@ -156,11 +168,9 @@
       <!-- PROFESSIONAL SUMMARY -->
       <div class="section">
         <div class="section-title">Professional Summary</div>
-        <ul>
-          <li>Full Stack Developer with hands-on production experience building and deploying end-to-end MERN applications — including real-time WebSocket systems, AI API integrations (Groq + Google Gemini), payment gateway flows, and role-based access control across 2 live projects.</li>
-          <li>Strong command of the full development lifecycle: REST API design and testing (Postman), secure backend architecture (JWT, HMAC, RBAC), responsive React frontends (code-splitting, dynamic routing), cloud media management (Cloudinary), and CI/CD pipelines using GitHub Actions with deployments on Vercel and Render.</li>
-          <li>Seeking a Full Stack Developer role to deliver scalable, production-ready features across both frontend and backend — contributing to system design discussions, participating in code reviews, and growing within a collaborative engineering team.</li>
-        </ul>
+        <p class="summary-para">Full Stack Developer (MERN) with 2 live, deployed production applications — including real-time WebSocket systems, AI API integrations (Groq + Google Gemini), and Razorpay payment flows with HMAC server-side verification.</p>
+        <p class="summary-para">Hands-on with the complete stack: React frontends, Node.js/Express backends, MongoDB, CI/CD via GitHub Actions, and cloud deployments on Vercel and Render.</p>
+        <p class="summary-para">Seeking a Full Stack Developer role to contribute production-ready features across the complete stack, participate in code reviews, and grow within a strong engineering team.</p>
       </div>
 
       <!-- PROJECTS -->
@@ -169,24 +179,32 @@
 
         <!-- ReWear -->
         <div class="project-block">
-          <p class="project-title">ReWear – Pre-Loved Fashion Marketplace &nbsp;|&nbsp; Live: <a href="https://rewear-dusky.vercel.app/" target="_blank">rewear-dusky.vercel.app</a></p>
+          <p class="project-title">
+            ReWear – Pre-Loved Fashion Marketplace &nbsp;|&nbsp;
+            <span style="font-weight:400;">Stack: MERN, Socket.io, Groq, Gemini, Razorpay, Cloudinary, GitHub Actions</span>
+          </p>
+          <p class="project-meta">Live: <a href="https://rewear-dusky.vercel.app/" target="_blank">rewear-dusky.vercel.app</a></p>
           <ul>
-            <li>Delivered end-to-end AI integration with a hybrid architecture — text messages routed to Groq (LLaMA 3.1) for 14,400 req/day free-tier capacity, image uploads routed to Google Gemini for vision-based resale price estimation with Cloudinary image input; engineered fault-tolerant 3-key rotation and 2-model fallback chain per provider for production-grade quota resilience across both APIs.</li>
-            <li>Built a production-grade real-time MERN + Socket.io application with role-based route protection across 2 roles (Admin, User) — single User account supporting both buying and selling — with bidirectional chat and Cloudinary media uploads via <code>upload_stream</code> pipeline.</li>
-            <li>Architected an in-chat price negotiation engine with structured offer/counter-offer/decline flows (2-round limit) persisted across 5 message types using atomic MongoDB operations — eliminating inconsistent transaction states.</li>
-            <li>Integrated Razorpay with HMAC server-side signature verification guarding 2 checkout flows (standard + negotiated price) against race conditions; implemented CI pipelines using GitHub Actions and integrated platform-native CD via Vercel and Render — achieving zero hard-refresh failures in production.</li>
-            <li>Implemented a 5-status listing lifecycle (pending → approved → rejected → sold → inactive) with admin moderation as a content trust layer; secured Socket.io connections via JWT handshake middleware — rejecting unauthenticated connections before room entry.</li>
+            <li>Engineered fault-tolerant hybrid AI integration — Groq (LLaMA 3.1) for text + Google Gemini for vision-based resale price estimation — with 3-key rotation and 2-model fallback chain per provider for production-grade quota resilience.</li>
+            <li>Built production-grade real-time MERN + Socket.io marketplace with RBAC across 2 roles (Admin, User), bidirectional chat, and Cloudinary media uploads via <code>upload_stream</code> pipeline.</li>
+            <li>Architected in-chat price negotiation engine (offer/counter-offer/decline, 2-round limit) persisted across 5 message types using atomic MongoDB operations — eliminating inconsistent transaction states.</li>
+            <li>Integrated Razorpay with HMAC signature verification guarding 2 checkout flows against race conditions; deployed via GitHub Actions CI + Vercel/Render CD — zero hard-refresh failures in production.</li>
+            <li>Secured Socket.io connections via JWT handshake middleware; enforced 5-status listing lifecycle (pending → approved → rejected → sold → inactive) with admin moderation layer.</li>
           </ul>
         </div>
 
         <!-- Job Portal -->
         <div class="project-block">
-          <p class="project-title">Job Portal – Full-Stack MERN Application &nbsp;|&nbsp; Live: <a href="https://jobportal-frontend-ten.vercel.app" target="_blank">jobportal-frontend-ten.vercel.app</a></p>
+          <p class="project-title">
+            Job Portal – Full-Stack MERN Application &nbsp;|&nbsp;
+            <span style="font-weight:400;">Stack: MERN, JWT, Cloudinary, Multer, GitHub Actions</span>
+          </p>
+          <p class="project-meta">Live: <a href="https://jobportal-frontend-ten.vercel.app" target="_blank">jobportal-frontend-ten.vercel.app</a></p>
           <ul>
-            <li>Architected a scalable Job Portal (MERN) with RBAC across 2 roles (Recruiter, Job Seeker) — 15+ RESTful APIs on MVC architecture covering job posting, applications, and user workflows with JWT-based authentication and protected routes.</li>
-            <li>Built secure backend services with dynamic job filtering across multiple parameters and complete application lifecycle management, following REST principles and clean separation of concerns.</li>
-            <li>Integrated Cloudinary for cloud-based resume storage with Multer validation and error handling; delivered a performance-optimized React frontend with code-splitting, dynamic routing, and a fully responsive UI.</li>
-            <li>Tested and validated 15+ APIs using Postman ensuring reliable request/response handling and robust error handling across both user roles; configured automated build validation and deployment workflows on Vercel ensuring production stability through environment-based configuration.</li>
+            <li>Architected scalable MERN Job Portal with RBAC across 2 roles (Recruiter, Job Seeker) — 15+ RESTful APIs on MVC architecture with JWT authentication and fully protected routes.</li>
+            <li>Built dynamic job filtering across multiple parameters with complete application lifecycle management, clean separation of concerns, and REST best practices throughout.</li>
+            <li>Integrated Cloudinary for cloud-based resume storage with Multer validation; delivered performance-optimized React frontend with code-splitting, lazy loading, and fully responsive UI.</li>
+            <li>Tested and validated 15+ APIs using Postman across both user roles; configured GitHub Actions deployment workflows ensuring production stability through environment-based configuration.</li>
           </ul>
         </div>
       </div>
@@ -194,10 +212,10 @@
       <!-- TECHNICAL SKILLS -->
       <div class="section">
         <div class="section-title">Technical Skills</div>
-        <p><strong>Languages:</strong> JavaScript (ES6+), TypeScript (learning), Python, HTML5, CSS3, Java (Basics)</p>
+        <p><strong>Languages:</strong> JavaScript (ES6+), TypeScript, Python, HTML5, CSS3, Java</p>
         <p><strong>Frameworks &amp; Libraries:</strong> React.js (v18), Node.js, Express.js, Socket.io, Tailwind CSS, Axios, Multer, Mongoose ODM</p>
         <p><strong>AI &amp; APIs:</strong> Google Gemini API, Groq API (LLaMA 3.1), multi-turn conversational AI, REST API design, Postman (API testing &amp; documentation)</p>
-        <p><strong>Databases:</strong> MongoDB (atomic operations, aggregation pipelines, indexing), SQL (Basics)</p>
+        <p><strong>Databases:</strong> MongoDB (atomic operations, aggregation pipelines, indexing), SQL</p>
         <p><strong>Cloud &amp; DevOps:</strong> AWS, Docker, Vercel, Render, Netlify, Cloudinary, CI/CD (GitHub Actions)</p>
         <p><strong>Payments &amp; Security:</strong> Razorpay, HMAC Signature Verification, JWT, Bcrypt, RBAC, Cybersecurity Fundamentals</p>
         <p><strong>Methodologies:</strong> Agile, Scrum, MVC Architecture, code reviews, SDLC</p>
@@ -209,13 +227,13 @@
         <div class="section-title">Certifications</div>
         <p class="cert-line">J.P. Morgan – Software Engineering Job Simulation &nbsp;|&nbsp; AWS – Solutions Architecture Job Simulation</p>
         <p class="cert-line">Deloitte Australia – Data Analytics Job Simulation &nbsp;|&nbsp; Walmart USA – Advanced Software Engineering Job Simulation</p>
-        <p class="cert-line">DataCom – Cybersecurity Fundamentals &nbsp;|&nbsp; Docker – Containerization &amp; Deployment &nbsp;|&nbsp; Certificates: <a href="https://tinyurl.com/abhi-certificates" target="_blank">tinyurl.com/abhi-certificates</a></p>
+        <p class="cert-line">DataCom – Cybersecurity Fundamentals &nbsp;|&nbsp; Docker – Containerization &amp; Deployment &nbsp;|&nbsp; <a href="https://drive.google.com/file/d/1FH-uXXmyMsILWGyvCgmUwxa9H5lkJSTr/view" target="_blank">View All Certificates</a></p>
       </div>
 
       <!-- EDUCATION -->
       <div class="section">
         <div class="section-title">Education</div>
-        <p><strong>Bachelor of Science in Information Technology (BSc IT)</strong> &nbsp;—&nbsp; L.S. Raheja College, University of Mumbai &nbsp;|&nbsp; 2026</p>
+        <p><strong>Bachelor of Science in Information Technology (BSc IT)</strong> &nbsp;—&nbsp; L.S. Raheja College, University of Mumbai &nbsp;|&nbsp; Graduated: 2026</p>
         <p style="margin-top: 4px;"><strong>Higher Secondary Certificate (HSC)</strong> &nbsp;—&nbsp; Durga Devi Saraf Junior College &nbsp;|&nbsp; 2020</p>
       </div>
 
