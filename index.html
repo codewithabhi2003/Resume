@@ -185,7 +185,7 @@
           </p>
           <p class="project-meta">Live: <a href="https://rewear-dusky.vercel.app/" target="_blank">rewear-dusky.vercel.app</a></p>
           <ul>
-            <li>Engineered fault-tolerant hybrid AI integration — Groq (LLaMA 3.1) for text (14,400 req/day capacity) + Google Gemini for vision-based resale price estimation — with 3-key rotation and 2-model fallback chain per provider for production-grade quota resilience.</li>
+            <li>Engineered fault-tolerant hybrid AI integration — Groq (LLaMA 3.1) for text + Google Gemini for vision-based resale price estimation — with 3-key rotation and 2-model fallback chain per provider for production-grade quota resilience.</li>
             <li>Built production-grade real-time MERN + Socket.io marketplace with RBAC across 2 roles (Admin, User), bidirectional chat, and Cloudinary media uploads via <code>upload_stream</code> pipeline.</li>
             <li>Architected in-chat price negotiation engine (offer/counter-offer/decline, 2-round limit) persisted across 5 message types using atomic MongoDB operations — eliminating inconsistent transaction states.</li>
             <li>Integrated Razorpay with HMAC signature verification guarding 2 checkout flows against race conditions; deployed via GitHub Actions CI + Vercel/Render CD — zero hard-refresh failures in production.</li>
@@ -225,9 +225,21 @@
       <!-- CERTIFICATIONS -->
       <div class="section">
         <div class="section-title">Certifications</div>
-        <p class="cert-line">J.P. Morgan – Software Engineering Job Simulation &nbsp;|&nbsp; AWS – Solutions Architecture Job Simulation</p>
-        <p class="cert-line">Deloitte Australia – Data Analytics Job Simulation &nbsp;|&nbsp; Walmart USA – Advanced Software Engineering Job Simulation</p>
-        <p class="cert-line">DataCom – Cybersecurity Fundamentals &nbsp;|&nbsp; Docker – Containerization &amp; Deployment &nbsp;|&nbsp; <a href="https://drive.google.com/file/d/1FH-uXXmyMsILWGyvCgmUwxa9H5lkJSTr/view" target="_blank">View All Certificates</a></p>
+        <div style="display:flex; flex-direction:column; gap:4px;">
+          <div style="display:flex; gap:0;">
+            <span style="flex:1; font-size:13px;">J.P. Morgan – Software Engineering Job Simulation</span>
+            <span style="flex:1; font-size:13px;">AWS – Solutions Architecture Job Simulation</span>
+          </div>
+          <div style="display:flex; gap:0;">
+            <span style="flex:1; font-size:13px;">Docker – Containerization &amp; Deployment</span>
+            <span style="flex:1; font-size:13px;">Deloitte Australia – Data Analytics Job Simulation</span>
+          </div>
+          <div style="display:flex; gap:0;">
+            <span style="flex:1; font-size:13px;">Walmart USA – Advanced Software Engineering Job Simulation</span>
+            <span style="flex:1; font-size:13px;">DataCom – Cybersecurity Fundamentals</span>
+          </div>
+          <div style="margin-top:3px; font-size:13px;"><strong>Certificates:</strong> <a href="https://drive.google.com/file/d/1FH-uXXmyMsILWGyvCgmUwxa9H5lkJSTr/view" target="_blank">drive.google.com/file/d/1FH-uXXmyMsILWGyvCgmUwxa9H5lkJSTr/view</a></div>
+        </div>
       </div>
 
       <!-- EDUCATION -->
@@ -239,10 +251,12 @@
 
     </div>
 
-    <div class="download-wrapper">
+    <!-- Download Button -->
+     <div class="download-wrapper">
       <div class="download-label">Download Resume</div>
       <a href="Abhishek Vishwakarma – Full Stack Developer.pdf" download="Abhishek Vishwakarma – Full Stack Developer.pdf" class="download-circle" title="Download Resume">⬇</a>
     </div>
+
 
   </body>
 </html>
