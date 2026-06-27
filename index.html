@@ -173,10 +173,9 @@
         <p class="summary-para">Seeking a Full Stack Developer role to contribute production-ready features across the complete stack, participate in code reviews, and grow within a strong engineering team.</p>
       </div>
 
-      <!-- PROJECTS -->
-      <div class="section">
+        <div class="section">
         <div class="section-title">Projects</div>
-
+ 
         <!-- ReWear -->
         <div class="project-block">
           <p class="project-title">
@@ -185,14 +184,14 @@
           </p>
           <p class="project-meta">Live: <a href="https://rewear-dusky.vercel.app/" target="_blank">rewear-dusky.vercel.app</a></p>
           <ul>
-            <li>Engineered fault-tolerant hybrid AI integration — Groq (LLaMA 3.1) for text (14,400 req/day capacity) + Google Gemini for vision-based resale price estimation — with 3-key rotation and 2-model fallback chain per provider for production-grade quota resilience.</li>
-            <li>Built production-grade real-time MERN + Socket.io marketplace with RBAC across 2 roles (Admin, User), bidirectional chat, and Cloudinary media uploads via <code>upload_stream</code> pipeline.</li>
-            <li>Architected in-chat price negotiation engine (offer/counter-offer/decline, 2-round limit) persisted across 5 message types using atomic MongoDB operations — eliminating inconsistent transaction states.</li>
-            <li>Integrated Razorpay with HMAC signature verification guarding 2 checkout flows against race conditions; deployed via GitHub Actions CI + Vercel/Render CD — zero hard-refresh failures in production.</li>
-            <li>Secured Socket.io connections via JWT handshake middleware; enforced 5-status listing lifecycle (pending → approved → rejected → sold → inactive) with admin moderation layer.</li>
+            <li>Engineered fault-tolerant <strong>hybrid AI integration</strong> — Groq (LLaMA 3.1) for text (<strong>14,400 req/day</strong> capacity) + Google Gemini for vision-based resale price estimation — with <strong>3-key rotation</strong> and <strong>2-model fallback chain</strong> per provider for production-grade quota resilience.</li>
+            <li>Built production-grade <strong>real-time MERN + Socket.io</strong> marketplace with <strong>RBAC across 2 roles</strong> (Admin, User), bidirectional chat, and Cloudinary media uploads via <code>upload_stream</code> pipeline.</li>
+            <li>Architected <strong>in-chat price negotiation engine</strong> (offer/counter-offer/decline, 2-round limit) persisted across <strong>5 message types</strong> using atomic MongoDB operations — eliminating inconsistent transaction states.</li>
+            <li>Integrated <strong>Razorpay with HMAC signature verification</strong> guarding <strong>2 checkout flows</strong> against race conditions; deployed via GitHub Actions CI + Vercel/Render CD — <strong>zero hard-refresh failures</strong> in production.</li>
+            <li>Secured Socket.io connections via <strong>JWT handshake middleware</strong>; enforced <strong>5-status listing lifecycle</strong> (pending → approved → rejected → sold → inactive) with admin moderation layer.</li>
           </ul>
         </div>
-
+ 
         <!-- Job Portal -->
         <div class="project-block">
           <p class="project-title">
@@ -201,13 +200,15 @@
           </p>
           <p class="project-meta">Live: <a href="https://jobportal-frontend-ten.vercel.app" target="_blank">jobportal-frontend-ten.vercel.app</a></p>
           <ul>
-            <li>Architected scalable MERN Job Portal with RBAC across 2 roles (Recruiter, Job Seeker) — 15+ RESTful APIs on MVC architecture with JWT authentication and fully protected routes.</li>
-            <li>Built dynamic job filtering across multiple parameters with complete application lifecycle management, clean separation of concerns, and REST best practices throughout.</li>
-            <li>Integrated Cloudinary for cloud-based resume storage with Multer validation; delivered performance-optimized React frontend with code-splitting, lazy loading, and fully responsive UI.</li>
-            <li>Tested and validated 15+ APIs using Postman across both user roles; configured GitHub Actions deployment workflows ensuring production stability through environment-based configuration.</li>
+            <li>Architected scalable MERN Job Portal with <strong>RBAC across 2 roles</strong> (Recruiter, Job Seeker) — <strong>15+ RESTful APIs</strong> on MVC architecture with <strong>JWT authentication</strong>, fully protected routes, and clean separation of concerns throughout.</li>
+            <li>Engineered <strong>recruiter dashboard</strong> with real-time stats (active jobs, total applicants, registered companies) and quick-action controls for job posting, company registration, and applicant management.</li>
+            <li>Integrated <strong>Cloudinary</strong> for cloud-based resume storage with Multer validation; delivered <strong>performance-optimized React frontend</strong> with code-splitting, lazy loading, and fully responsive UI across all screen sizes.</li>
+            <li>Built <strong>dynamic job filtering</strong> across multiple parameters with complete application lifecycle management, <strong>bookmark system</strong> with persistent toggle state, and recruiter profile transparency showing hiring manager details within job listings.</li>
+            <li>Configured <strong>GitHub Actions CI/CD pipelines</strong> with environment-based deployment workflows; validated end-to-end request/response handling across <strong>4+ user flows</strong> — ensuring <strong>zero-downtime</strong> production stability on Vercel.</li>
           </ul>
         </div>
       </div>
+ 
 
       <!-- TECHNICAL SKILLS -->
       <div class="section">
