@@ -56,7 +56,6 @@
 
       p { margin: 2px 0; font-size: 13px; }
 
-      /* Summary paragraphs — NOT bullets */
       .summary-para {
         font-size: 13px;
         line-height: 1.5;
@@ -86,11 +85,6 @@
 
       .project-block { margin-bottom: 9px; }
 
-      .cert-line {
-        font-size: 13px;
-        margin-bottom: 2px;
-      }
-
       .download-wrapper {
         position: fixed;
         bottom: 20px;
@@ -112,7 +106,7 @@
         white-space: nowrap;
       }
 
-      .download-circle {
+      .download-btn {
         width: 48px;
         height: 48px;
         background: #0a4c8b;
@@ -122,17 +116,16 @@
         align-items: center;
         justify-content: center;
         font-size: 22px;
-        text-decoration: none;
         box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         cursor: pointer;
         border: none;
       }
 
-      .download-circle:hover { background: #083b6d; }
+      .download-btn:hover { background: #083b6d; }
 
       @media print {
         body { padding: 14px 24px; font-size: 12px; line-height: 1.4; }
-        ul li, p, .cert-line, .summary-para { font-size: 12px; }
+        ul li, p, .summary-para { font-size: 12px; }
         .section-title { font-size: 12px; }
         .project-title { font-size: 12px; }
         .project-meta { font-size: 10.5px; }
@@ -160,7 +153,7 @@
         </div>
         <div class="contact-row" style="margin-top: 3px;">
           <span>GitHub: <a href="https://github.com/codewithabhi2003" target="_blank">github.com/codewithabhi2003</a></span>
-          <span>LinkedIn: <a href="https://www.linkedin.com/in/abhishek-vishwakarma-47a43828b" target="_blank">linkedin.com/in/abhishek-vishwakarma</a></span>
+          <span>LinkedIn: <a href="https://www.linkedin.com/in/abhishek-vishwakarma-47a43828b" target="_blank">linkedin.com/in/abhishek-vishwakarma-47a43828b</a></span>
           <span>Portfolio: <a href="https://portfolio-tau-lilac-98.vercel.app" target="_blank">portfolio-tau-lilac-98.vercel.app</a></span>
         </div>
       </div>
@@ -173,9 +166,10 @@
         <p class="summary-para">Seeking a Full Stack Developer role to contribute production-ready features across the complete stack, participate in code reviews, and grow within a strong engineering team.</p>
       </div>
 
-        <div class="section">
+      <!-- PROJECTS -->
+      <div class="section">
         <div class="section-title">Projects</div>
- 
+
         <!-- ReWear -->
         <div class="project-block">
           <p class="project-title">
@@ -191,7 +185,7 @@
             <li>Secured Socket.io connections via <strong>JWT handshake middleware</strong>; enforced <strong>5-status listing lifecycle</strong> (pending → approved → rejected → sold → inactive) with admin moderation layer.</li>
           </ul>
         </div>
- 
+
         <!-- Job Portal -->
         <div class="project-block">
           <p class="project-title">
@@ -200,15 +194,13 @@
           </p>
           <p class="project-meta">Live: <a href="https://jobportal-frontend-ten.vercel.app" target="_blank">jobportal-frontend-ten.vercel.app</a></p>
           <ul>
-            <li>Architected scalable MERN Job Portal with <strong>RBAC across 2 roles</strong> (Recruiter, Job Seeker) — <strong>15+ RESTful APIs</strong> on MVC architecture with <strong>JWT authentication</strong>, fully protected routes, and clean separation of concerns throughout.</li>
-            <li>Engineered <strong>recruiter dashboard</strong> with real-time stats (active jobs, total applicants, registered companies) and quick-action controls for job posting, company registration, and applicant management.</li>
-            <li>Integrated <strong>Cloudinary</strong> for cloud-based resume storage with Multer validation; delivered <strong>performance-optimized React frontend</strong> with code-splitting, lazy loading, and fully responsive UI across all screen sizes.</li>
-            <li>Built <strong>dynamic job filtering</strong> across multiple parameters with complete application lifecycle management, <strong>bookmark system</strong> with persistent toggle state, and recruiter profile transparency showing hiring manager details within job listings.</li>
-            <li>Configured <strong>GitHub Actions CI/CD pipelines</strong> with environment-based deployment workflows; validated end-to-end request/response handling across <strong>4+ user flows</strong> — ensuring <strong>zero-downtime</strong> production stability on Vercel.</li>
+            <li>Architected scalable MERN Job Portal with <strong>RBAC across 2 roles</strong> (Recruiter, Job Seeker) — <strong>15+ RESTful APIs</strong> on MVC architecture with <strong>JWT authentication</strong> and fully protected routes.</li>
+            <li>Built dynamic job filtering across multiple parameters with complete application lifecycle management, clean separation of concerns, and REST best practices throughout.</li>
+            <li>Integrated <strong>Cloudinary</strong> for cloud-based resume storage with Multer validation; delivered performance-optimized React frontend with code-splitting, lazy loading, and fully responsive UI.</li>
+            <li>Tested and validated <strong>15+ APIs</strong> using Postman across both user roles; configured <strong>GitHub Actions</strong> deployment workflows ensuring production stability through environment-based configuration.</li>
           </ul>
         </div>
       </div>
- 
 
       <!-- TECHNICAL SKILLS -->
       <div class="section">
@@ -239,7 +231,9 @@
             <span style="flex:1; font-size:13px;">Walmart USA – Advanced Software Engineering Job Simulation</span>
             <span style="flex:1; font-size:13px;">DataCom – Cybersecurity Fundamentals</span>
           </div>
-          <div style="margin-top:3px; font-size:13px;"><strong>Certificates:</strong> <a href="https://drive.google.com/file/d/1FH-uXXmyMsILWGyvCgmUwxa9H5lkJSTr/view" target="_blank">drive.google.com/file/d/1FH-uXXmyMsILWGyvCgmUwxa9H5lkJSTr/view</a></div>
+          <div style="margin-top:3px; font-size:13px;">
+            <strong>Certificates:</strong> <a href="https://drive.google.com/file/d/1FH-uXXmyMsILWGyvCgmUwxa9H5lkJSTr/view" target="_blank">drive.google.com/file/d/1FH-uXXmyMsILWGyvCgmUwxa9H5lkJSTr/view</a>
+          </div>
         </div>
       </div>
 
@@ -247,17 +241,27 @@
       <div class="section">
         <div class="section-title">Education</div>
         <p><strong>Bachelor of Science in Information Technology (BSc IT)</strong> &nbsp;—&nbsp; L.S. Raheja College, University of Mumbai &nbsp;|&nbsp; 2023 – 2026 &nbsp;|&nbsp; CGPA: 8.33</p>
-        <p style="margin-top: 4px;"><strong>Diploma in Pharmacy (D.Pharm)</strong> &nbsp;—&nbsp; New Prestige College of Pharmacy &nbsp;|&nbsp; 2020 – 2023</p>
+        <p style="margin-top: 4px;"><strong>Diploma in Pharmacy (D.Pharm)</strong> &nbsp;—&nbsp; Board of Examining Authority (BEA), Karnataka &nbsp;|&nbsp; 2023</p>
         <p style="margin-top: 4px;"><strong>Higher Secondary Certificate (HSC)</strong> &nbsp;—&nbsp; Durga Devi Saraf Junior College &nbsp;|&nbsp; 2020</p>
       </div>
+
     </div>
 
     <!-- Download Button -->
-     <div class="download-wrapper">
+    <div class="download-wrapper">
       <div class="download-label">Download Resume</div>
-      <a href="Abhishek Vishwakarma – Full Stack Developer.pdf" download="Abhishek Vishwakarma – Full Stack Developer.pdf" class="download-circle" title="Download Resume">⬇</a>
+      <button class="download-btn" title="Download as PDF" onclick="
+        const el = document.querySelector('.resume');
+        const opt = {
+          margin: [10, 15],
+          filename: 'Abhishek_Vishwakarma_Resume.pdf',
+          image: { type: 'jpeg', quality: 0.98 },
+          html2canvas: { scale: 2, useCORS: true },
+          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
+        html2pdf().set(opt).from(el).save();
+      ">⬇</button>
     </div>
-
 
   </body>
 </html>
