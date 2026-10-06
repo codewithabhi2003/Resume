@@ -169,20 +169,18 @@
 
   </div>
 
-  <div class="download-wrapper">
-    <div class="download-label">Download Resume</div>
-    <button class="download-circle" title="Download as PDF" onclick="
-      const el = document.querySelector('.resume');
-      const opt = {
-        margin: [10, 15],
-        filename: 'Abhishek_Vishwakarma___Full_Stack_Developer.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2, useCORS: true },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-      };
-      html2pdf().set(opt).from(el).save();
-    ">⬇</button>
-  </div>
+ <div class="download-wrapper">
+  <div class="download-label">Download Resume</div>
+
+  <a
+    class="download-circle"
+    href="/Abhishek%20Vishwakarma%20%E2%80%93%20Full%20Stack%20Developer.pdf"
+    download="Abhishek Vishwakarma – Full Stack Developer.pdf"
+    title="Download Resume"
+  >
+    ⬇
+  </a>
+</div>
 
 </body>
 </html>
