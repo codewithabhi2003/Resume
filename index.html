@@ -4,59 +4,137 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abhishek Vishwakarma – Full Stack Developer</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
       font-family: "Segoe UI", Calibri, Arial, sans-serif;
-      background: #ffffff; color: #000;
-      font-size: 13px; line-height: 1.42; padding: 20px 30px;
+      background: #f0f2f5;
+      color: #000;
+      font-size: 13px;
+      line-height: 1.42;
+      padding: 24px 20px 40px;
     }
-    .resume { max-width: 800px; margin: auto; }
-    h1 { font-size: 23px; text-align: center; margin-bottom: 5px; letter-spacing: 0.5px; }
-    .contact { font-size: 11.5px; text-align: center; margin-bottom: 11px; line-height: 1.7; }
-    .contact-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 3px 16px; }
+
+    .resume {
+      max-width: 800px;
+      margin: auto;
+      background: #ffffff;
+      padding: 20px 30px;
+    }
+
+    h1 {
+      font-size: 23px;
+      text-align: center;
+      margin-bottom: 5px;
+      letter-spacing: 0.5px;
+    }
+
+    .contact {
+      font-size: 11.5px;
+      text-align: center;
+      margin-bottom: 11px;
+      line-height: 1.7;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3px 16px;
+    }
+
+    .contact-row.nowrap {
+      flex-wrap: nowrap;
+      gap: 3px 12px;
+      font-size: 11px;
+    }
+
     a { color: #0645ad; text-decoration: underline; font-weight: 500; }
+
     .section { margin-bottom: 10px; }
+
     .section-title {
-      font-size: 13px; font-weight: 700; border-bottom: 1px solid #000;
-      padding-bottom: 2px; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.4px;
+      font-size: 13px;
+      font-weight: 700;
+      border-bottom: 1px solid #000;
+      padding-bottom: 2px;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
     }
+
     p { margin: 2px 0; font-size: 13px; }
-    .summary-para { font-size: 13px; line-height: 1.5; margin-bottom: 5px; }
+
+    .summary-para {
+      font-size: 13px;
+      line-height: 1.5;
+      margin-bottom: 5px;
+    }
     .summary-para:last-child { margin-bottom: 0; }
+
     ul { margin: 2px 0 0 16px; padding: 0; }
-    ul li { margin-bottom: 3.5px; font-size: 13px; line-height: 1.42; }
-    .project-title { font-weight: 600; font-size: 13px; margin-bottom: 3px; }
-    .project-meta { font-size: 11.5px; color: #444; margin-bottom: 4px; }
+
+    ul li {
+      margin-bottom: 3.5px;
+      font-size: 13px;
+      line-height: 1.42;
+    }
+
+    .project-title {
+      font-weight: 600;
+      font-size: 13px;
+      margin-bottom: 3px;
+    }
+
+    .project-meta {
+      font-size: 11.5px;
+      color: #444;
+      margin-bottom: 4px;
+    }
+
     .project-block { margin-bottom: 9px; }
-    .download-wrapper {
-      position: fixed; bottom: 20px; right: 20px;
-      display: flex; align-items: center; gap: 8px; z-index: 999;
+
+    code { font-family: Consolas, monospace; font-size: 0.92em; }
+
+    /* Download button — centered below the resume card */
+    .download-area {
+      max-width: 800px;
+      margin: 18px auto 0;
+      display: flex;
+      justify-content: center;
     }
-    .download-label {
-      background: #ffffff; color: #0a4c8b; padding: 5px 10px;
-      font-size: 12px; font-weight: 600; border-radius: 20px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.2); white-space: nowrap;
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #0a4c8b;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 12px 32px;
+      border-radius: 8px;
+      box-shadow: 0 4px 14px rgba(10,76,139,0.35);
+      transition: background 0.2s;
     }
-    .download-circle {
-      width: 48px; height: 48px; background: #0a4c8b; color: #fff;
-      border-radius: 50%; display: flex; align-items: center;
-      justify-content: center; font-size: 22px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3); cursor: pointer; border: none;
-    }
-    .download-circle:hover { background: #083b6d; }
+    .download-btn:hover { background: #083b6d; color: #fff; }
+    .download-btn .icon { font-size: 18px; }
+
     @media print {
-      body { padding: 14px 24px; font-size: 12px; line-height: 1.4; }
+      body { background: #fff; padding: 14px 24px; font-size: 12px; line-height: 1.4; }
+      .resume { padding: 0; }
       ul li, p, .summary-para { font-size: 12px; }
-      .section-title, .project-title { font-size: 12px; }
+      .section-title { font-size: 12px; }
+      .project-title { font-size: 12px; }
       .project-meta { font-size: 10.5px; }
       h1 { font-size: 21px; }
       .contact { font-size: 10.5px; }
       .section { margin-bottom: 8px; }
       ul li { margin-bottom: 3px; }
       .project-block { margin-bottom: 7px; }
-      .download-wrapper { display: none; }
+      .download-area { display: none; }
     }
   </style>
 </head>
@@ -73,17 +151,17 @@
         <span id="em"></span>
         <script>document.getElementById("em").textContent="abhishekvishwakarma1149"+"@"+"gmail.com";</script>
       </div>
-      <div class="contact-row" style="margin-top: 3px;">
-        <span>GitHub: <a href="https://github.com/codewithabhi2003" target="_blank">github.com/codewithabhi2003</a></span>
-        <span>LinkedIn: <a href="https://www.linkedin.com/in/abhishek-vishwakarma-47a43828b" target="_blank">linkedin.com/in/abhishek-vishwakarma-47a43828b</a></span>
-        <span>Portfolio: <a href="https://portfolio-tau-lilac-98.vercel.app" target="_blank">portfolio-tau-lilac-98.vercel.app</a></span>
+      <div class="contact-row nowrap" style="margin-top: 3px;">
+        <span style="white-space:nowrap;">GitHub: <a href="https://github.com/codewithabhi2003" target="_blank">github.com/codewithabhi2003</a></span>
+        <span style="white-space:nowrap;">LinkedIn: <a href="https://www.linkedin.com/in/abhishek-vishwakarma-47a43828b" target="_blank">linkedin.com/in/abhishek-vishwakarma-47a43828b</a></span>
+        <span style="white-space:nowrap;">Portfolio: <a href="https://portfolio-tau-lilac-98.vercel.app" target="_blank">portfolio-tau-lilac-98.vercel.app</a></span>
       </div>
     </div>
 
     <!-- PROFESSIONAL SUMMARY -->
     <div class="section">
       <div class="section-title">Professional Summary</div>
-      <p class="summary-para">Full Stack Developer with hands-on experience building and deploying production-grade web applications using <strong>Next.js, React, Node.js, TypeScript, PostgreSQL, MongoDB, and REST APIs</strong> — including a multi-tenant SaaS platform, an AI-powered marketplace, and a full-stack job portal, all live and deployed.</p>
+      <p class="summary-para">Full Stack Developer with hands-on experience building and deploying production-grade web applications using Next.js, React, Node.js, TypeScript, PostgreSQL, MongoDB, and REST APIs — including an AI-powered meeting platform, a multi-tenant SaaS platform, and a full-stack job portal, all live and deployed.</p>
       <p class="summary-para">Experienced across the complete stack — authentication, role-based access control, database design, real-time systems, AI integrations, and cloud deployments — with strong focus on solving practical business problems through clean, scalable, and maintainable software.</p>
       <p class="summary-para">Seeking a Full Stack Developer role to contribute production-ready features end to end, participate in code reviews, and grow within a strong engineering team.</p>
     </div>
@@ -92,35 +170,29 @@
     <div class="section">
       <div class="section-title">Projects</div>
 
-      <!-- HERMESX -->
+      <!-- INTELLMEET -->
       <div class="project-block">
-        <p class="project-title">
-          HermesX – AI-Powered Customer Feedback Intelligence Platform &nbsp;|&nbsp;
-          <span style="font-weight:400;">Stack: Next.js 14, TypeScript, PostgreSQL, pgvector, Prisma, NextAuth.js, Groq, Cohere, Tailwind CSS</span>
-        </p>
-        <p class="project-meta">Live: <a href="https://hermesx-wine.vercel.app/" target="_blank">hermesx-wine.vercel.app</a></p>
+        <p class="project-title">IntellMeet – AI-Powered Meeting &amp; Collaboration Platform &nbsp;|&nbsp; <span style="font-weight:400;">Stack: MERN, WebRTC, Socket.IO, Groq Whisper, Gemini, MongoDB Atlas, Tailwind CSS, Framer Motion</span></p>
+        <p class="project-meta">Live: <a href="https://intellmeet-zeta.vercel.app/" target="_blank">intellmeet-zeta.vercel.app</a></p>
         <ul>
-          <li>Built a <strong>multi-tenant SaaS platform</strong> across <strong>3 workspace roles</strong> (Admin, Analyst, Viewer) with tenant isolation enforced across <strong>25+ API endpoints</strong> — full-stack architecture using <strong>Next.js 14, TypeScript, PostgreSQL, Prisma ORM</strong>, authentication, authorization, and workspace-level data isolation.</li>
-          <li>Integrated <strong>2 AI services</strong> — Groq for automated sentiment and theme classification + <strong>Cohere's 1,024-dimensional embeddings</strong> with <strong>PostgreSQL pgvector</strong> for semantic search and <strong>RAG-powered Ask HermesX</strong> enabling natural language queries over feedback datasets.</li>
-          <li>Built a <strong>validated CSV ingestion pipeline</strong> supporting up to <strong>1,000 feedback records per upload</strong> — followed by automated AI classification, embedding generation, analytics, trend analysis, and <strong>Voice-of-Customer report generation</strong>.</li>
-          <li>Developed a reusable frontend system with <strong>30+ UI components</strong> — responsive dashboards, analytics visualizations, feedback workflows, AI review tools, and role-specific interfaces built with <strong>Next.js 14, Tailwind CSS</strong>, and component-driven architecture.</li>
-          <li>Implemented <strong>3-layer application security</strong> — NextAuth.js authentication, server-side authorization, and workspace-level tenant filtering — with <strong>Zod API input validation</strong>, server-side PDF report generation, and production-focused error handling deployed on <strong>Vercel</strong>.</li>
+          <li>Architected a full-stack AI meeting platform from scratch with <strong>49 REST API endpoints across 11 route modules</strong> and <strong>12 Mongoose models with 14 indexes</strong>, covering the full meeting lifecycle (auth, workspaces, transcription, translation, summaries, tasks, search, recordings); built a <strong>14-page React frontend</strong> with 59 components, 10 custom hooks and a responsive bento-grid UI with a true-black night theme.</li>
+          <li>Built <strong>real-time WebRTC video conferencing for up to 6 mesh peers</strong> over <strong>24 Socket.IO events</strong> (signaling, chat, presence, reactions, screen sharing, AI status updates) behind a <strong>JWT-verified socket handshake</strong>.</li>
+          <li>Integrated <strong>2 AI providers</strong>: Groq Whisper (whisper-large-v3-turbo) for English and Hindi transcription of audio up to 25 MB / 180 minutes (FFmpeg auto-chunking, parallel transcription), and Gemini (gemini-2.5-flash) for translation and map-reduce summaries, with per-language caching so repeat requests make zero extra API calls.</li>
+          <li>Built a <strong>hybrid RAG search pipeline</strong> combining Gemini multilingual embeddings (768 dimensions) with MongoDB <code>$text</code> keyword search, merged using <strong>Reciprocal Rank Fusion across up to 3,000 candidates</strong>, returning cited answers verified against the database; enforced access control inside the MongoDB query to prevent cross-workspace data leakage.</li>
+          <li>Applied <strong>10-point security hardening</strong> (Helmet, strict CORS, mongo-sanitize, bcrypt cost 12, account lockout after 5 attempts, token versioning, per-user AI rate limiting at 20 req/min, httpOnly cookies) and wrote <strong>31 test files (12 server, 19 client)</strong> with mocked AI providers; deployed on Vercel and Render with MongoDB Atlas.</li>
         </ul>
       </div>
 
-      <!-- REWEAR -->
+      <!-- HERMESX -->
       <div class="project-block">
-        <p class="project-title">
-          ReWear – Pre-Loved Fashion Marketplace &nbsp;|&nbsp;
-          <span style="font-weight:400;">Stack: MERN, Socket.io, Groq, Gemini, Razorpay, Cloudinary, GitHub Actions</span>
-        </p>
-        <p class="project-meta">Live: <a href="https://rewear-dusky.vercel.app/" target="_blank">rewear-dusky.vercel.app</a></p>
+        <p class="project-title">HermesX – AI-Powered Customer Feedback Intelligence Platform &nbsp;|&nbsp; <span style="font-weight:400;">Stack: Next.js 14, TypeScript, PostgreSQL, pgvector, Prisma, NextAuth.js, Groq, Cohere, Tailwind CSS</span></p>
+        <p class="project-meta">Live: <a href="https://hermesx-wine.vercel.app/" target="_blank">hermesx-wine.vercel.app</a></p>
         <ul>
-          <li>Engineered fault-tolerant <strong>hybrid AI integration</strong> — Groq (LLaMA 3.1) for text (<strong>14,400 req/day</strong> capacity) + Google Gemini for vision-based resale price estimation — with <strong>3-key rotation</strong> and <strong>2-model fallback chain</strong> per provider for production-grade quota resilience.</li>
-          <li>Built production-grade <strong>real-time MERN + Socket.io</strong> marketplace with <strong>RBAC across 2 roles</strong> (Admin, User), bidirectional chat, and Cloudinary media uploads via <code>upload_stream</code> pipeline.</li>
-          <li>Architected <strong>in-chat price negotiation engine</strong> (offer/counter-offer/decline, 2-round limit) persisted across <strong>5 message types</strong> using atomic MongoDB operations — eliminating inconsistent transaction states.</li>
-          <li>Integrated <strong>Razorpay with HMAC signature verification</strong> guarding <strong>2 checkout flows</strong> against race conditions; deployed via GitHub Actions CI + Vercel/Render CD — <strong>zero hard-refresh failures</strong> in production.</li>
-          <li>Secured Socket.io connections via <strong>JWT handshake middleware</strong>; enforced <strong>5-status listing lifecycle</strong> (pending → approved → rejected → sold → inactive) with admin moderation layer.</li>
+          <li>Built a <strong>multi-tenant SaaS platform</strong> across 3 workspace roles (Admin, Analyst, Viewer) with tenant isolation enforced across <strong>25+ API endpoints</strong> — full-stack architecture using Next.js 14, TypeScript, PostgreSQL, Prisma ORM, authentication, authorization, and workspace-level data isolation.</li>
+          <li>Integrated <strong>2 AI services</strong> — Groq for automated sentiment and theme classification + Cohere's <strong>1,024-dimensional embeddings</strong> with PostgreSQL <strong>pgvector</strong> for semantic search and <strong>RAG-powered "Ask HermesX"</strong> enabling natural language queries over feedback datasets.</li>
+          <li>Built a <strong>validated CSV ingestion pipeline</strong> supporting up to 1,000 feedback records per upload — followed by automated AI classification, embedding generation, analytics, trend analysis, and Voice-of-Customer report generation.</li>
+          <li>Developed a reusable frontend system with <strong>30+ UI components</strong> — responsive dashboards, analytics visualizations, feedback workflows, AI review tools, and role-specific interfaces built with Next.js 14, Tailwind CSS, and component-driven architecture.</li>
+          <li>Implemented <strong>3-layer application security</strong> — NextAuth.js authentication, server-side authorization, and workspace-level tenant filtering — with <strong>Zod</strong> API input validation, server-side PDF report generation, and production-focused error handling deployed on Vercel.</li>
         </ul>
       </div>
 
@@ -131,9 +203,9 @@
       <div class="section-title">Technical Skills</div>
       <p><strong>Languages:</strong> JavaScript (ES6+), TypeScript, Python, Java, SQL, HTML5, CSS3</p>
       <p><strong>Frontend:</strong> React.js, Next.js 14, Tailwind CSS, Framer Motion, Axios</p>
-      <p><strong>Backend:</strong> Node.js, Express.js, REST APIs, Socket.io, Prisma</p>
+      <p><strong>Backend:</strong> Node.js, Express.js, REST APIs, Socket.io, WebRTC, Mongoose, Prisma, FFmpeg</p>
       <p><strong>Databases:</strong> PostgreSQL, MongoDB, MySQL, pgvector</p>
-      <p><strong>AI &amp; APIs:</strong> Groq API, Google Gemini API, Cohere Embeddings, RAG, Semantic Search, REST API Design</p>
+      <p><strong>AI &amp; APIs:</strong> Groq API (Whisper, LLaMA), Google Gemini API, Cohere Embeddings, RAG, Semantic Search, REST API Design</p>
       <p><strong>Cloud &amp; DevOps:</strong> Vercel, Render, Netlify, Docker, AWS, GitHub Actions, CI/CD</p>
       <p><strong>Security &amp; Architecture:</strong> NextAuth.js, JWT, RBAC, Multi-Tenant SaaS, Authentication, Authorization</p>
       <p><strong>Methodologies:</strong> Agile, Scrum, MVC Architecture, SDLC</p>
@@ -143,44 +215,44 @@
     <div class="section">
       <div class="section-title">Certifications</div>
       <div style="display:flex; flex-direction:column; gap:4px;">
-        <div style="display:flex; gap:0;">
-          <span style="flex:1; font-size:13px;">J.P. Morgan – Software Engineering Job Simulation</span>
-          <span style="flex:1; font-size:13px;">AWS – Solutions Architecture Job Simulation</span>
+        <div style="display:flex;">
+          <span style="flex:1;">J.P. Morgan – Software Engineering Job Simulation</span>
+          <span style="flex:1;">AWS – Solutions Architecture Job Simulation</span>
         </div>
-        <div style="display:flex; gap:0;">
-          <span style="flex:1; font-size:13px;">Docker – Containerization &amp; Deployment</span>
-          <span style="flex:1; font-size:13px;">Deloitte Australia – Data Analytics Job Simulation</span>
+        <div style="display:flex;">
+          <span style="flex:1;">Docker – Containerization &amp; Deployment</span>
+          <span style="flex:1;">Deloitte Australia – Data Analytics Job Simulation</span>
         </div>
-        <div style="display:flex; gap:0;">
-          <span style="flex:1; font-size:13px;">Walmart USA – Advanced Software Engineering Job Simulation</span>
-          <span style="flex:1; font-size:13px;">DataCom – Cybersecurity Fundamentals</span>
+        <div style="display:flex;">
+          <span style="flex:1;">Walmart USA – Advanced Software Engineering Job Simulation</span>
+          <span style="flex:1;">DataCom – Cybersecurity Fundamentals</span>
         </div>
-        <div style="margin-top:3px; font-size:13px;"><strong>Certificates:</strong> <a href="https://drive.google.com/file/d/1FH-uXXmyMsILWGyvCgmUwxa9H5lkJSTr/view" target="_blank">drive.google.com/file/d/1FH-uXXmyMsILWGyvCgmUwxa9H5lkJSTr/view</a></div>
+        <div style="margin-top:3px;"><strong>Certificates:</strong> <a href="https://drive.google.com/file/d/1FH-uXXmyMsILWGyvCgmUwxa9H5lkJSTr/view" target="_blank">drive.google.com/file/d/1FH-uXXmyMsILWGyvCgmUwxa9H5lkJSTr/view</a></div>
       </div>
     </div>
 
     <!-- EDUCATION -->
     <div class="section">
       <div class="section-title">Education</div>
-      <p><strong>Bachelor of Science in Information Technology (BSc IT)</strong> &nbsp;—&nbsp; L.S. Raheja College, University of Mumbai &nbsp;|&nbsp; 2023 – 2026 &nbsp;|&nbsp; CGPA: 8.33</p>
-      <p style="margin-top: 4px;"><strong>Diploma in Pharmacy (D.Pharm)</strong> &nbsp;—&nbsp; New Prestige College of Pharmacy &nbsp;|&nbsp; 2020 – 2023</p>
-      <p style="margin-top: 4px;"><strong>Higher Secondary Certificate (HSC)</strong> &nbsp;—&nbsp; Durga Devi Saraf Junior College &nbsp;|&nbsp; 2020</p>
+      <p><strong>BSc Information Technology</strong> — L.S. Raheja College, University of Mumbai | 2023 – 2026 | CGPA: 8.33</p>
+      <p style="margin-top: 4px;"><strong>Diploma in Pharmacy (D.Pharm)</strong> — Board of Examining Authority (BEA), Karnataka | 2023</p>
+      <p style="margin-top: 4px;"><strong>Higher Secondary Certificate (HSC)</strong> — Durga Devi Saraf Junior College | 2020</p>
     </div>
 
   </div>
 
- <div class="download-wrapper">
-  <div class="download-label">Download Resume</div>
-
-  <a
-    class="download-circle"
-    href="/Abhishek%20Vishwakarma%20%E2%80%93%20Full%20Stack%20Developer.pdf"
-    download="Abhishek Vishwakarma – Full Stack Developer.pdf"
-    title="Download Resume"
-  >
-    ⬇
-  </a>
-</div>
+  <!-- DOWNLOAD BUTTON — centered below resume -->
+  <div class="download-area">
+    <a
+      class="download-btn"
+      href="Abhishek_Vishwakarma_Full_Stack_Developer.pdf"
+      download="Abhishek_Vishwakarma_Full_Stack_Developer.pdf"
+      title="Download PDF"
+    >
+      <span class="icon">⬇</span>
+      Download PDF
+    </a>
+  </div>
 
 </body>
 </html>
