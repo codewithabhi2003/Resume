@@ -161,9 +161,32 @@
     <!-- PROFESSIONAL SUMMARY -->
     <div class="section">
       <div class="section-title">Professional Summary</div>
-      <p class="summary-para">Full Stack Developer with hands-on experience building and deploying production-grade web applications using Next.js, React, Node.js, TypeScript, PostgreSQL, MongoDB, and REST APIs — including an AI-powered meeting platform, a multi-tenant SaaS platform, and a full-stack job portal, all live and deployed.</p>
-      <p class="summary-para">Experienced across the complete stack — authentication, role-based access control, database design, real-time systems, AI integrations, and cloud deployments — with strong focus on solving practical business problems through clean, scalable, and maintainable software.</p>
-      <p class="summary-para">Seeking a Full Stack Developer role to contribute production-ready features end to end, participate in code reviews, and grow within a strong engineering team.</p>
+      <p class="summary-para">Full Stack Developer (BSc IT, 2026) with hands-on experience building and deploying production-grade applications using Next.js, React, Node.js, TypeScript, PostgreSQL and MongoDB, including an AI-powered meeting platform and a multi-tenant SaaS, both live. Experienced in authentication, real-time systems and AI integrations; seeking a Full Stack Developer role to ship production-ready features end to end.</p>
+    </div>
+
+    <!-- TECHNICAL SKILLS -->
+    <div class="section">
+      <div class="section-title">Technical Skills</div>
+      <p><strong>Languages:</strong> JavaScript (ES6+), TypeScript, Python, Java, SQL, HTML5, CSS3</p>
+      <p><strong>Frontend:</strong> React.js, Next.js 14, Tailwind CSS, Framer Motion, Axios</p>
+      <p><strong>Backend:</strong> Node.js, Express.js, REST APIs, Socket.io, WebRTC, Mongoose, Prisma, FFmpeg</p>
+      <p><strong>Databases:</strong> PostgreSQL, MongoDB, MySQL, pgvector</p>
+      <p><strong>AI &amp; APIs:</strong> Groq API (Whisper, LLaMA), Google Gemini API, Cohere Embeddings, RAG, Semantic Search, REST API Design</p>
+      <p><strong>Cloud &amp; DevOps:</strong> Vercel, Render, Netlify, Docker, AWS, GitHub Actions, CI/CD</p>
+      <p><strong>Security &amp; Architecture:</strong> NextAuth.js, JWT, RBAC, Multi-Tenant SaaS, Authentication, Authorization</p>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="section">
+      <div class="section-title">Experience</div>
+      <div class="project-block">
+        <p class="project-title">Web Development Intern &nbsp;|&nbsp; <span style="font-weight:400;">Zidio Development (Remote) &nbsp;|&nbsp; Aug 2026 – Nov 2026</span></p>
+        <ul>
+          <li>Independently designed and built the complete web application assigned in a 3-month project-based internship, taking it from requirements to a working delivery within the project deadline.</li>
+          <li>Developed the application's core features and resolved defects found during development, learning to break a project into tasks, debug systematically and deliver working software against a fixed deadline.</li>
+          <li>Completed Zidio's Web Development training program, gaining hands-on experience in structuring a project, resolving defects and delivering against a fixed timeline.</li>
+        </ul>
+      </div>
     </div>
 
     <!-- PROJECTS -->
@@ -178,7 +201,7 @@
           <li>Architected a full-stack AI meeting platform from scratch with <strong>49 REST API endpoints across 11 route modules</strong> and <strong>12 Mongoose models with 14 indexes</strong>, covering the full meeting lifecycle (auth, workspaces, transcription, translation, summaries, tasks, search, recordings); built a <strong>14-page React frontend</strong> with 59 components, 10 custom hooks and a responsive bento-grid UI with a true-black night theme.</li>
           <li>Built <strong>real-time WebRTC video conferencing for up to 6 mesh peers</strong> over <strong>24 Socket.IO events</strong> (signaling, chat, presence, reactions, screen sharing, AI status updates) behind a <strong>JWT-verified socket handshake</strong>.</li>
           <li>Integrated <strong>2 AI providers</strong>: Groq Whisper (whisper-large-v3-turbo) for English and Hindi transcription of audio up to 25 MB / 180 minutes (FFmpeg auto-chunking, parallel transcription), and Gemini (gemini-2.5-flash) for translation and map-reduce summaries, with per-language caching so repeat requests make zero extra API calls.</li>
-          <li>Built a <strong>hybrid RAG search pipeline</strong> combining Gemini multilingual embeddings (768 dimensions) with MongoDB <code>$text</code> keyword search, merged using <strong>Reciprocal Rank Fusion across up to 3,000 candidates</strong>, returning cited answers verified against the database; enforced access control inside the MongoDB query to prevent cross-workspace data leakage.</li>
+          <li>Built a <strong>hybrid RAG search pipeline</strong> combining Gemini multilingual embeddings (768 dimensions) with MongoDB <code>$text</code> keyword search: semantic ranking scores up to <strong>3,000 candidate segment vectors</strong> (cosine similarity, 0.55 threshold) and the top-60 results from each method are merged with <strong>Reciprocal Rank Fusion (k = 60)</strong>, returning cited answers verified against the database, with access control enforced inside every MongoDB query.</li>
           <li>Applied <strong>10-point security hardening</strong> (Helmet, strict CORS, mongo-sanitize, bcrypt cost 12, account lockout after 5 attempts, token versioning, per-user AI rate limiting at 20 req/min, httpOnly cookies) and wrote <strong>31 test files (12 server, 19 client)</strong> with mocked AI providers; deployed on Vercel and Render with MongoDB Atlas.</li>
         </ul>
       </div>
@@ -188,27 +211,14 @@
         <p class="project-title">HermesX – AI-Powered Customer Feedback Intelligence Platform &nbsp;|&nbsp; <span style="font-weight:400;">Stack: Next.js 14, TypeScript, PostgreSQL, pgvector, Prisma, NextAuth.js, Groq, Cohere, Tailwind CSS</span></p>
         <p class="project-meta">Live: <a href="https://hermesx-wine.vercel.app/" target="_blank">hermesx-wine.vercel.app</a></p>
         <ul>
-          <li>Built a <strong>multi-tenant SaaS platform</strong> across 3 workspace roles (Admin, Analyst, Viewer) with tenant isolation enforced across <strong>25+ API endpoints</strong> — full-stack architecture using Next.js 14, TypeScript, PostgreSQL, Prisma ORM, authentication, authorization, and workspace-level data isolation.</li>
+          <li>Built a <strong>multi-tenant SaaS platform</strong> across 3 workspace roles (Admin, Analyst, Viewer) with tenant isolation enforced across <strong>25+ API endpoints</strong> using Next.js 14, TypeScript, PostgreSQL and Prisma ORM.</li>
           <li>Integrated <strong>2 AI services</strong> — Groq for automated sentiment and theme classification + Cohere's <strong>1,024-dimensional embeddings</strong> with PostgreSQL <strong>pgvector</strong> for semantic search and <strong>RAG-powered "Ask HermesX"</strong> enabling natural language queries over feedback datasets.</li>
-          <li>Built a <strong>validated CSV ingestion pipeline</strong> supporting up to 1,000 feedback records per upload — followed by automated AI classification, embedding generation, analytics, trend analysis, and Voice-of-Customer report generation.</li>
-          <li>Developed a reusable frontend system with <strong>30+ UI components</strong> — responsive dashboards, analytics visualizations, feedback workflows, AI review tools, and role-specific interfaces built with Next.js 14, Tailwind CSS, and component-driven architecture.</li>
-          <li>Implemented <strong>3-layer application security</strong> — NextAuth.js authentication, server-side authorization, and workspace-level tenant filtering — with <strong>Zod</strong> API input validation, server-side PDF report generation, and production-focused error handling deployed on Vercel.</li>
+          <li>Built a <strong>validated CSV ingestion pipeline</strong> (up to 1,000 feedback records per upload) feeding automated AI classification, embeddings, analytics, trend analysis and Voice-of-Customer reports.</li>
+          <li>Developed a reusable frontend of <strong>30+ UI components</strong> — responsive dashboards, analytics visualizations, AI review tools and role-specific interfaces with Tailwind CSS.</li>
+          <li>Implemented <strong>3-layer security</strong> — NextAuth.js authentication, server-side authorization and workspace-level tenant filtering — with <strong>Zod</strong> input validation, server-side PDF reports and error handling, deployed on Vercel.</li>
         </ul>
       </div>
 
-    </div>
-
-    <!-- TECHNICAL SKILLS -->
-    <div class="section">
-      <div class="section-title">Technical Skills</div>
-      <p><strong>Languages:</strong> JavaScript (ES6+), TypeScript, Python, Java, SQL, HTML5, CSS3</p>
-      <p><strong>Frontend:</strong> React.js, Next.js 14, Tailwind CSS, Framer Motion, Axios</p>
-      <p><strong>Backend:</strong> Node.js, Express.js, REST APIs, Socket.io, WebRTC, Mongoose, Prisma, FFmpeg</p>
-      <p><strong>Databases:</strong> PostgreSQL, MongoDB, MySQL, pgvector</p>
-      <p><strong>AI &amp; APIs:</strong> Groq API (Whisper, LLaMA), Google Gemini API, Cohere Embeddings, RAG, Semantic Search, REST API Design</p>
-      <p><strong>Cloud &amp; DevOps:</strong> Vercel, Render, Netlify, Docker, AWS, GitHub Actions, CI/CD</p>
-      <p><strong>Security &amp; Architecture:</strong> NextAuth.js, JWT, RBAC, Multi-Tenant SaaS, Authentication, Authorization</p>
-      <p><strong>Methodologies:</strong> Agile, Scrum, MVC Architecture, SDLC</p>
     </div>
 
     <!-- CERTIFICATIONS -->
@@ -234,9 +244,7 @@
     <!-- EDUCATION -->
     <div class="section">
       <div class="section-title">Education</div>
-      <p><strong>BSc Information Technology</strong> — L.S. Raheja College, University of Mumbai | 2023 – 2026 | CGPA: 8.33</p>
-      <p style="margin-top: 4px;"><strong>Diploma in Pharmacy (D.Pharm)</strong> — Board of Examining Authority (BEA), Karnataka | 2023</p>
-      <p style="margin-top: 4px;"><strong>Higher Secondary Certificate (HSC)</strong> — Durga Devi Saraf Junior College | 2020</p>
+      <p><strong>Bachelor of Science in Information Technology</strong> — L.S. Raheja College, University of Mumbai | 2023 – 2026 | CGPA: 8.33</p>
     </div>
 
   </div>
